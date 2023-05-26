@@ -19,4 +19,4 @@ filenames=("$@")
 # Extract filenames
 first_filename="${filenames[0]}"
 
-ffmpeg -i "$first_filename" "${first_filename%.*}".gif
+ffmpeg -loglevel quiet -i "$first_filename" "${first_filename%.*}".gif
