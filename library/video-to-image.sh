@@ -20,5 +20,4 @@ arguments=("$@")
 video_file="${arguments[0]}"
 fps="${arguments[1]:-1}"
 
-echo "$fps"
-ffmpeg -report -i "$video_file" -vf fps=$fps "${video_file%.*}"_%d.png
+ffmpeg -i "$video_file" -vf fps=$fps "${video_file%.*}"_%d.png
