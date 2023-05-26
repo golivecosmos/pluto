@@ -120,6 +120,16 @@ Usage:
 sh index.sh resize assets/image.png 0.5
 ```
 
+### Resize an image
+
+This command will extract N number of frames from a video. Pass in a video file and the frames per second as a decimal, e.g. 1 for an image every 1 second, 2 for 2 images every 1 second, 0.25 for an image every 4 seconds. 
+
+Usage:
+
+```bash
+sh index.sh video-to-image assets/video.mp4 0.5
+```
+
 ## How to Contribute
 
 Feel free to explore these commands and make use of the media tools provided by this library. Enjoy working with your media files!
