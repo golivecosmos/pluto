@@ -12,7 +12,7 @@ Pluto 🪄
 
 # What is Pluto?
 
-Pluto is a library of scripts for working with media files. This library provides various functionalities such as resizing images, creating video from images or documents, and encoding files into differnt formats. 
+Pluto is a library of scripts for working with media files. This library provides various functionalities such as resizing images, creating video from images or documents, and encoding files into differnt formats.
 
 ## Why is Pluto helpful?
 
