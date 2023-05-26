@@ -1,3 +1,15 @@
+<h1 align="center" >
+Pluto 🪄
+</h1>
+<p align="center">
+    <a href="https://github.com/golivecosmos/pluto/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/golivecosmos/pluto" alt="License" />
+    </a>
+  <a href="https://twitter.com/golivecosmos">
+    <img src="https://img.shields.io/twitter/follow/golivecosmos?style=social" alt="Cosmos" style="margin-right:3px" />
+  </a>
+</p>
+
 # What is Pluto?
 
 Pluto is a library of scripts for working with media files. This library provides various functionalities such as resizing images, creating video from images or documents, and encoding files into differnt formats.
@@ -8,7 +20,9 @@ Sometimes you need a quick way to work with media files. For example:
 
 - Creating a slideshow video from a set of images
 - Converting image and video file into browser-friendly formats
-- Generating responsive images scaled to various sizes
+- Generating responsive images for a website scaled to various sizes
+
+If you find yourself working with media files often, it may be helpful to have a library to automate your workflows.
 
 To use the library, follow the prerequisites below and run from your terminal.
 
@@ -21,13 +35,19 @@ Before using this library, make sure you have the following software installed o
 
 ## Getting Started
 
-To get started, check out the table of contents below and decide which command you'd like to apply to your media files.
+To get started, check out the table of contents below and follow these steps:
 
-Store your media files in the `assets` directory in this repo and run the name of the command from your terminal like so:
+1. Decide which 🪄 command 💫 you'd like to apply to your media files
+
+2. Store your media files in the `assets` directory in this repo
+
+3. Run the name of the command from your terminal like so:
 
 ```bash
-sh index.sh <command> <file1> <file2>
+sh index.sh <command> <file1> <file2> <option1>
 ```
+
+4.Check the `assets` directory for the created file
 
 ## Table of Contents
 
