@@ -1,12 +1,12 @@
-<h1 align="center" >
+<h1 align='center' >
 Pluto 🪄
 </h1>
-<p align="center">
-    <a href="https://github.com/golivecosmos/pluto/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/golivecosmos/pluto" alt="License" />
+<p align='center'>
+    <a href='https://github.com/golivecosmos/pluto/blob/main/LICENSE'>
+    <img src='https://img.shields.io/github/license/golivecosmos/pluto' alt='License' />
     </a>
-  <a href="https://twitter.com/golivecosmos">
-    <img src="https://img.shields.io/twitter/follow/golivecosmos?style=social" alt="Cosmos" style="margin-right:3px" />
+  <a href='https://twitter.com/golivecosmos'>
+    <img src='https://img.shields.io/twitter/follow/golivecosmos?style=social' alt='Cosmos' style='margin-right:3px' />
   </a>
 </p>
 
