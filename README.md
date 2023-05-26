@@ -39,15 +39,15 @@ To get started, check out the table of contents below and follow these steps:
 
 1. Decide which 🪄 command 💫 you'd like to apply to your media files
 
-2. Store your media files in the `assets` directory in this repo
+1. Store your media files in the `assets` directory in this repo
 
-3. Run the name of the command from your terminal like so:
+1. Run the name of the command from your terminal like so:
 
-```bash
-sh index.sh <command> <file1> <file2> <option1>
-```
+    ```bash
+        sh index.sh <command> <file1> <file2> <option1>
+    ```
 
-4.Check the `assets` directory for the created file
+1. Check the `assets` directory for the created file
 
 ## Table of Contents
 
