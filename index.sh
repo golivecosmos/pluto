@@ -7,7 +7,7 @@ if [ "$#" -lt 2 ]; then
     exit 1
 fi
 
-# Extract the command name and remove the file extension if present
+# Extract the command name
 command_name="$1"
 command_script="./library/${command_name}.sh"
 
