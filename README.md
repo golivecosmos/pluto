@@ -39,6 +39,7 @@ sh index.sh <command> <file1> <file2>
 - [Convert to WebP](#convert-to-webp)
 - [Create A Horizontal Stack](#create-a-horizontal-stack)
 - [Resize an Image](#resize-an-image)
+- [Extract frames from a video](#extract-frames-from-a-video)
 
 ### Convert PDF to MP4
 
@@ -120,7 +121,7 @@ Usage:
 sh index.sh resize assets/image.png 0.5
 ```
 
-### Resize an image
+### Extract frames from a video
 
 This command will extract N number of frames from a video. Pass in a video file and the frames per second as a decimal, e.g. 1 for an image every 1 second, 2 for 2 images every 1 second, 0.25 for an image every 4 seconds. 
 
