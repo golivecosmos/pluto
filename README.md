@@ -53,14 +53,14 @@ To get started, check out the table of contents below and follow these steps:
 
 ## Table of Contents
 
-- [Convert PDF to MP4](#convert-pdf-to-mp4)
-- [Convert to GIF](#convert-to-gif)
-- [Convert to MP4](#convert-to-mp4)
-- [Convert to OGG](#convert-to-ogg)
-- [Convert to WebM](#convert-to-webm)
-- [Convert to WebP](#convert-to-webp)
-- [Create A Horizontal Stack](#create-a-horizontal-stack)
-- [Resize an Image](#resize-an-image)
+- [Convert PDF to video](#convert-pdf-to-mp4)
+- [Convert video to GIF](#convert-to-gif)
+- [Convert video to MP4](#convert-to-mp4)
+- [Convert video or audio to OGG](#convert-to-ogg)
+- [Convert video to WebM](#convert-to-webm)
+- [Convert image to WebP](#convert-to-webp)
+- [Edit two images and/or videos to display next to each other, horizontally](#create-a-horizontal-stack)
+- [Resize an image](#resize-an-image)
 - [Extract frames from a video](#extract-frames-from-a-video)
 
 ### Convert PDF to MP4
