@@ -62,6 +62,7 @@ To get started, check out the table of contents below and follow these steps:
 - [Edit two images and/or videos to display next to each other, horizontally](#create-a-horizontal-stack)
 - [Resize an image](#resize-an-image)
 - [Extract frames from a video](#extract-frames-from-a-video)
+- [Modify video speed](#modify-video-speed)
 
 ### Convert PDF to MP4
 
@@ -153,7 +154,7 @@ Usage:
 sh index.sh video-to-image assets/video.mp4 0.5
 ```
 
-### Change the speed of a video
+### Modify video speed
 
 This command will speed up or slow down a video. Pass in a video file and the speed as a decimal, e.g. 2 to slow down the video, 0.5 to double the speed of the video. 
 
