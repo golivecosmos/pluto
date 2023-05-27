@@ -153,6 +153,16 @@ Usage:
 sh index.sh video-to-image assets/video.mp4 0.5
 ```
 
+### Change the speed of a video
+
+This command will speed up or slow down a video. Pass in a video file and the speed as a decimal, e.g. 2 to slow down the video, 0.5 to double the speed of the video. 
+
+Usage:
+
+```bash
+sh index.sh modify-video-speed assets/video.mp4 0.5
+```
+
 ## How to Contribute
 
 Feel free to explore these commands and make use of the media tools provided by this library. Enjoy working with your media files!
