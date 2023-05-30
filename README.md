@@ -54,18 +54,41 @@ To get started, check out the table of contents below and follow these steps:
 
 1. Check the `assets` directory for the created file
 
+----------------
+
 ## Table of Contents
 
+- [Convert image to video](#convert-image-to-video)
+- [Convert image to WebP](#convert-image-to-webp)
 - [Convert PDF to video](#convert-pdf-to-mp4)
-- [Convert video to GIF](#convert-to-gif)
-- [Convert video to MP4](#convert-to-mp4)
-- [Convert video or audio to OGG](#convert-to-ogg)
-- [Convert video to WebM](#convert-to-webm)
-- [Convert image to WebP](#convert-to-webp)
+- [Convert video to GIF](#convert-video-to-gif)
+- [Convert video to MP4](#convert-video-to-mp4)
+- [Convert video or audio to OGG](#convert-video-to-ogg)
+- [Convert video to WebM](#convert-video-to-webm)
 - [Edit two images and/or videos to display next to each other, horizontally](#create-a-horizontal-stack)
 - [Resize an image](#resize-an-image)
 - [Extract frames from a video](#extract-frames-from-a-video)
 - [Modify video speed](#modify-video-speed)
+
+### Convert Image to Video
+
+This command can encode an image file into an MP4 video file. Pass in the desired frame rate and duration. Frame rate will default to 24 frames per second and duration will default to 10 seconds.
+
+Usage:
+
+```bash
+sh index.sh image-to-video assets/image.png 24 10
+```
+
+### Convert Image to WebP
+
+This command can encode image files into a WebP file format.
+
+Usage:
+
+```bash
+sh index.sh webp assets/image.png
+```
 
 ### Convert PDF to MP4
 
@@ -77,7 +100,7 @@ Usage:
 sh index.sh pdf-to-mp4 assets/document.pd4 audio.mp3
 ```
 
-### Convert to GIF
+### Convert Video to GIF
 
 This command will convert a video file into a GIF file format.
 
@@ -87,7 +110,7 @@ Usage:
 sh index.sh gif assets/video.mp4
 ```
 
-### Convert to MP4
+### Convert Video to MP4
 
 This command can encode GIF or other video files into an MP4 file format.
 
@@ -97,7 +120,7 @@ Usage:
 sh index.sh mp4 assets/example.gif
 ```
 
-### Convert to OGG
+### Convert Video to OGG
 
 This command can encode GIF or other video files into an OGG file format.
 
@@ -107,7 +130,7 @@ Usage:
 sh index.sh ogg assets/example.gif
 ```
 
-### Convert to WebM
+### Convert Video to WebM
 
 This command can encode GIF or other video files into a WebM file format.
 
@@ -117,15 +140,7 @@ Usage:
 sh index.sh webm assets/example.gif
 ```
 
-### Convert to WebP
 
-This command can encode image files into a WebP file format.
-
-Usage:
-
-```bash
-sh index.sh webp assets/image.png
-```
 
 ### Create a Horizontal Stack
 
@@ -174,4 +189,5 @@ sh index.sh modify-video-speed assets/video.mp4 0.5
 Feel free to explore these scripts and open any issues if there's something you'd like to see added, or open a pull request to add new scripts.
 
 ### Thank you to ⭐star gazers⭐ supporting the project
+
 [![Stargazers repo roster for @golivecosmos/pluto](https://reporoster.com/stars/golivecosmos/pluto)](https://github.com/golivecosmos/pluto/stargazers)
