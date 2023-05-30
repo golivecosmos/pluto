@@ -3,7 +3,10 @@ Pluto 🪄
 </h1>
 <p align='center'>
     <a href='https://github.com/golivecosmos/pluto/blob/main/LICENSE'>
-    <img src='https://img.shields.io/github/license/golivecosmos/pluto' alt='License' />
+    <img src='https://img.shields.io/github/license/golivecosmos/pluto?style=plastic' alt='License' />
+    </a>
+      <a href='https://github.com/golivecosmos/llm-react-node-app-template'>
+        <img src='https://img.shields.io/github/commit-activity/w/golivecosmos/llm-react-node-app-template?style=plastic' alt='Cosmos'              style='margin-    right:3px' />
     </a>
   <a href='https://twitter.com/golivecosmos'>
     <img src='https://img.shields.io/twitter/follow/golivecosmos?style=social' alt='Cosmos' style='margin-right:3px' />
@@ -164,6 +167,11 @@ Usage:
 sh index.sh modify-video-speed assets/video.mp4 0.5
 ```
 
+----------------
+
 ## How to Contribute
 
-Feel free to explore these commands and make use of the media tools provided by this library. Enjoy working with your media files!
+Feel free to explore these scripts and open any issues if there's something you'd like to see added, or open a pull request to add new scripts.
+
+### Thank you to ⭐star gazers⭐ supporting the project
+[![Stargazers repo roster for @golivecosmos/pluto](https://reporoster.com/stars/golivecosmos/pluto)](https://github.com/golivecosmos/pluto/stargazers)
