@@ -17,7 +17,9 @@ fi
 arguments=("$@")
 
 # Extract filenames
-video_file="${arguments[0]}"
-fps="${arguments[1]:-1}"
+image_file="${arguments[0]}"
+fps="${arguments[1]:-24}"
+duration="${arguments[2]:-10}"
 
-ffmpeg -i "$video_file" -vf fps=$fps "${video_file%.*}"_%d.png
+ffmpeg -loop 1 -framerate "$fps" -i "$image_file" -c:v libx264 -pix_fmt yuv420p -t "$duration" "${image_file%.*}".mp4
+
