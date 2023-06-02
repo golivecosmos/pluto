@@ -7,7 +7,7 @@ if [ "$#" -eq 0 ]; then
     exit 1
 fi
 
-if [ "$#" -lt 1 ]; then
+if [ "$#" -lt 2 ]; then
     echo "Error: Insufficient number of arguments for filenames. Need at least one file."
     echo "Usage: ./script.sh <filename1>"
     exit 1
@@ -17,6 +17,26 @@ fi
 arguments=("$@")
 
 # Extract filenames
-# video_file="${arguments[0]}"
+transition="${arguments[0]}"
+duration="${arguments[1]}"
+fileArgs="${@:3}"
+
+echo "${transition}"
+echo "${fileArgs}"
+
+IFS=' ' read -ra file_paths <<< "$fileArgs"
 
 # ffmpeg -report -i "$video_file" -vf fps=$fps "${video_file%.*}"_%d.png
+command="ffmpeg -hide_banner"
+for f in "${file_paths[@]}"
+do
+    command="$command -loop 1 -i $f -t $duration"
+done
+
+filter_complex="[0:v][1:v]xfade=transition=hrslice:duration=1:offset=3 [p0]"
+
+final_command="$command '$filter_complex' -r 30 -c:v libx264 -map [p0] -pix_fmt yuv420 -t $duration assets/out.mp4"
+
+$final_command
+
+    
