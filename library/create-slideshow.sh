@@ -2,8 +2,8 @@
 
 # Check if the script is called with at least 4 arguments
 if [ "$#" -lt 4 ]; then
-    echo "Error: Insufficient number of arguments for filenames. Need at least TODO: fill this out."
-    echo "Usage: ./script.sh <filename1>"
+    echo "Error: Insufficient number of arguments for filenames. Need at least 2 files."
+    echo "Usage: ./script.sh transition duration <filename1> <filename2>..."
     exit 1
 fi
 
@@ -17,7 +17,7 @@ file_args="${@:3}"
 
 IFS=' ' read -ra file_paths <<< "$file_args"
 
-command="ffmpeg -report -y -hide_banner"
+command="ffmpeg -y -hide_banner"
 for f in "${file_paths[@]}"
 do
     command="$command -loop 1 -i $f -t $duration"
