@@ -27,7 +27,7 @@ Sometimes you need a quick way to work with media files. For example:
 
 If you find yourself working with media files often, it may be helpful to have a library to automate your workflows.
 
-![GIF of Pluto demo](https://cosmos-media-content.s3.amazonaws.com/public-content/pluto_demo.gif)
+![GIF of Pluto demo](https://github.com/golivecosmos/pluto/pluto_demo.gif)
 
 To use the library, follow the prerequisites below and run from your terminal.
 
