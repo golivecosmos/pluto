@@ -17,36 +17,38 @@ fileArgs="${@:3}"
 
 # TODO
 # Check valid transition
-# Check min fileArg length
 
 IFS=' ' read -ra file_paths <<< "$fileArgs"
 
-command="ffmpeg -report -y -hide_banner"
+command="ffmpeg -y -hide_banner"
 for f in "${file_paths[@]}"
 do
     command="$command -loop 1 -i $f -t $duration"
 done
 
 count=$(awk -F' ' '{print NF}' <<< "$fileArgs")
-offset=$(echo "scale=2; $duration/$count" | bc)
+offset=$(echo "scale=0; $duration/$count" | bc)
 
-filter_complex="[0:v][1:v]xfade=transition=${transition}:duration=1:offset=${offset}"
+filter_complex="[0:v][1:v]xfade=transition=${transition}:duration=0.5:offset=${offset}"
 
-if [ "${length}" -gt 2 ]; then
-    filter_complex="$filter_complex [t0];"
+if [ "${count}" -gt 2 ]; then
+    filter_complex="$filter_complex[t0];"
 
     index=2
-    newOffset=$offset+$offset
-    for rem_files in "$fileArgs[2]"
+    newOffset=$((offset + offset))
+
+    rem_files="${@:5}"
+    for rf in "$rem_files"
     do
-        filter_complex="[t0][v:${index}]xfade=transition=${transition}:duration=1:offset=${offset}"
-        if [ "${index}" -eq "$index"-1]; then
+        filter_complex="$filter_complex[t0][${index}:v]xfade=transition=${transition}:duration=0.5:offset=${newOffset}"
+        index=$((index + 1))
+
+        # complete
+        if [ "${index}" -eq "${count}" ]; then
             filter_complex="$filter_complex[out]"
         else
             filter_complex="$filter_complex[t$index]"
         fi
-
-        index=$((index + 1))
     done
 else
     filter_complex="$filter_complex[out]"
@@ -54,7 +56,4 @@ fi
 
 final_command="$command -filter_complex $filter_complex -r 30 -c:v libx264 -map [out] -pix_fmt yuv420p -t $duration -preset superfast assets/slideshow.mp4"
 
-echo "$final_command"
 $final_command
-
-    
