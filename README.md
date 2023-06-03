@@ -48,8 +48,8 @@ To get started, check out the table of contents below and follow these steps:
 
 1. Run the name of the command from your terminal like so:
 
-    ```bash
-        sh index.sh <command> <file1> <file2> <option1>
+    ```bash 
+    sh index.sh <command> <file1> <file2> <option1>
     ```
 
 1. Check the `assets` directory for the created file
