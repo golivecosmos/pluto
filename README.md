@@ -58,6 +58,7 @@ To get started, check out the table of contents below and follow these steps:
 
 ## Table of Contents
 
+- [Convert multiple images to video](#convert-multiple-images-to-video)
 - [Convert image to video](#convert-image-to-video)
 - [Convert image to WebP](#convert-image-to-webp)
 - [Convert PDF to video](#convert-pdf-to-mp4)
@@ -69,6 +70,16 @@ To get started, check out the table of contents below and follow these steps:
 - [Resize an image](#resize-an-image)
 - [Extract frames from a video](#extract-frames-from-a-video)
 - [Modify video speed](#modify-video-speed)
+
+### Convert Multiple Images to Video
+
+This command can encode multiple image files into an MP4 video file. Pass in the desired transition (you can find all the available options in the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/Xfade)), duration, and files you'd like to join.
+
+Usage:
+
+```bash
+sh index.sh multiple-images-to-video hblur 12 assets/image1.png assets/image2.png assets/image3.png assets/image4.png 
+```
 
 ### Convert Image to Video
 
