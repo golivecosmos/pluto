@@ -13,47 +13,49 @@ arguments=("$@")
 # Extract filenames
 transition="${arguments[0]}"
 duration="${arguments[1]}"
-fileArgs="${@:3}"
+file_args="${@:3}"
 
-# TODO
-# Check valid transition
+IFS=' ' read -ra file_paths <<< "$file_args"
 
-IFS=' ' read -ra file_paths <<< "$fileArgs"
-
-command="ffmpeg -y -hide_banner"
+command="ffmpeg -report -y -hide_banner"
 for f in "${file_paths[@]}"
 do
     command="$command -loop 1 -i $f -t $duration"
 done
 
-count=$(awk -F' ' '{print NF}' <<< "$fileArgs")
+count=$(awk -F' ' '{print NF}' <<< "$file_args")
 offset=$(echo "scale=0; $duration/$count" | bc)
+new_offset=$offset
 
 filter_complex="[0:v][1:v]xfade=transition=${transition}:duration=0.5:offset=${offset}"
 
 if [ "${count}" -gt 2 ]; then
+    initial_tag="t0"
     filter_complex="$filter_complex[t0];"
 
     index=2
-    newOffset=$((offset + offset))
+    new_offset=$((new_offset + offset))
 
     rem_files="${@:5}"
-    for rf in "$rem_files"
+    IFS=' ' read -ra rem_file_paths <<< "$rem_files"
+    
+    for rf in "${rem_file_paths[@]}"
     do
-        filter_complex="$filter_complex[t0][${index}:v]xfade=transition=${transition}:duration=0.5:offset=${newOffset}"
-        index=$((index + 1))
+        filter_complex="$filter_complex[${initial_tag}][${index}:v]xfade=transition=${transition}:duration=0.5:offset=${new_offset}"
 
-        # complete
-        if [ "${index}" -eq "${count}" ]; then
+        if [ "${index}" -eq "$((count-1))" ]; then
             filter_complex="$filter_complex[out]"
         else
-            filter_complex="$filter_complex[t$index]"
+            filter_complex="$filter_complex[t$index];"
+            initial_tag="t$index"
         fi
+
+        new_offset=$((new_offset + offset))
+        index=$((index + 1))
     done
 else
     filter_complex="$filter_complex[out]"
 fi
 
-final_command="$command -filter_complex $filter_complex -r 30 -c:v libx264 -map [out] -pix_fmt yuv420p -t $duration -preset superfast assets/slideshow.mp4"
-
+final_command="$command -filter_complex $filter_complex -r 30 -c:v libx264 -map [out] -pix_fmt yuv420p -t $duration -preset superfast assets/slide_show.mp4"
 $final_command
