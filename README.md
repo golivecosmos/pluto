@@ -68,6 +68,7 @@ To get started, check out the table of contents below and follow these steps:
 - [Convert video to WebM](#convert-video-to-webm)
 - [Edit two images and/or videos to display next to each other, horizontally](#create-a-horizontal-stack)
 - [Resize an image](#resize-an-image)
+- [Extract clip from a video](#extract-clip-from-a-video)
 - [Extract frames from a video](#extract-frames-from-a-video)
 - [Modify video speed](#modify-video-speed)
 
@@ -171,6 +172,15 @@ Usage:
 
 ```bash
 sh index.sh resize assets/image.png 0.5
+```
+### Extract clip from a video
+
+This command will extract a clip from the video. 
+
+Usage:
+
+```bash
+sh index.sh extract-clip assets/video.mp4 00:00:05 00:00:20 
 ```
 
 ### Extract frames from a video
