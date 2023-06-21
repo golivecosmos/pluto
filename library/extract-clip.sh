@@ -9,9 +9,8 @@ fi
 arguments=("$@")
 
 video_file_name="${arguments[0]}"
-extension="${video_file_name##*.}"
 
 startTime="${arguments[1]}"
 endTime="${arguments[2]}"
 
-ffmpeg -loglevel quiet -i "$video_file_name" -ss "$startTime" -to "$endTime" -c:v copy -c:a copy assets/clip."${extension}"
+ffmpeg -y -loglevel quiet -i "$video_file_name" -ss "$startTime" -to "$endTime" -c:v libx264 -pix_fmt yuv420p -c:a copy assets/clip.mp4
