@@ -175,7 +175,7 @@ sh index.sh resize assets/image.png 0.5
 ```
 ### Extract clip from a video
 
-This command will extract a clip from the video. 
+This command will extract a clip from the video using timestamps. The command requires a start and end timestamp following this format: HH:MM:SS.  
 
 Usage:
 
